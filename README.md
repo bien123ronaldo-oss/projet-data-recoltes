@@ -1,6 +1,6 @@
 # Projet final : les récoltes agricoles
 
-**Lien du tableau de bord :** (à coller ici une fois en ligne)
+**Lien du tableau de bord :** (https://projet-data-recoltes-cruiser.streamlit.app)
 
 **Équipe de 5, formée avant le jeudi 5 novembre à 23 h 59. Rendu le dimanche 8 novembre à 23 h 59. Soutenances du lundi 9 au vendredi 13 novembre.**
 
