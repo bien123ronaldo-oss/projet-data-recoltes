@@ -4,6 +4,7 @@ import pandas as pd
 import streamlit as st
 
 # Partie tableau de bord réalisée par REJUSTE Jovens Fequiere.
+# Onglet « Rendements » complété par Bien aime Ronaldo (question 2).
 DOSSIER = Path(__file__).parent / "donnees"
 FICHIER_RECOLTES = DOSSIER / "recoltes_propre.csv"
 FICHIER_DEPARTEMENTS = DOSSIER / "departements.csv"
@@ -197,6 +198,7 @@ with onglets[1]:
         rendements["production_t"] / rendements["surface_ha"]
     )
     rendements = rendements.sort_values("rendement_t_ha", ascending=False)
+    st.markdown("**Rendement moyen pondéré par culture (t/ha)**")
     st.bar_chart(rendements.set_index("culture")[["rendement_t_ha"]])
     st.dataframe(rendements, hide_index=True, width="stretch")
     meilleure_culture = rendements.iloc[0]
@@ -204,6 +206,26 @@ with onglets[1]:
         f"Parmi les cultures sélectionnées, le meilleur rendement pondéré est celui de "
         f"{meilleure_culture['culture']} ({meilleure_culture['rendement_t_ha']:.2f} t/ha)."
     )
+
+    # Question 2 : où (dans quel département) chaque culture rend-elle le mieux ?
+    st.markdown("**Rendement par département et par culture (t/ha)**")
+    rend_dep = (
+        filtrees.groupby(["departement", "culture"], as_index=False)
+        .agg(production_t=("production_t", "sum"), surface_ha=("surface_ha", "sum"))
+    )
+    rend_dep["rendement_t_ha"] = rend_dep["production_t"] / rend_dep["surface_ha"]
+    tableau_rend_dep = rend_dep.pivot(
+        index="departement", columns="culture", values="rendement_t_ha"
+    ).round(2)
+    st.dataframe(tableau_rend_dep, width="stretch")
+    meilleurs = rend_dep.loc[rend_dep.groupby("culture")["rendement_t_ha"].idxmax()]
+    texte_meilleurs = " ; ".join(
+        f"{ligne.culture} : {ligne.departement} ({ligne.rendement_t_ha:.2f} t/ha)"
+        for ligne in meilleurs.sort_values(
+            "rendement_t_ha", ascending=False
+        ).itertuples()
+    )
+    st.info("Meilleur département pour chaque culture : " + texte_meilleurs + ".")
 
 with onglets[2]:
     st.subheader("La pluie est-elle associée aux rendements ?")
