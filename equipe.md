@@ -6,7 +6,7 @@
 |---|---|---|
 | REJUSTE Jovens Fequiere | À compléter | Jointures et indicateurs ; tableau de bord Streamlit |
 | Herlentz Pierre | À compléter | Diagnostic et nettoyage des données |
-| Bien aime Ronaldo | À compléter | Analyses des questions 1 et 2 : production, valeur et rendements |
+| Bien123Ronaldo-oss | À compléter | Analyses des questions 1 et 2 : production, valeur et rendements |
 | Deliscar Dave | À compléter | Analyses des questions 3 et 4 : pluie et évolution des récoltes |
 | Jerome Jethro | À compléter | Analyse de la question 5 : production par habitant ; intégration et vérification finales |
 
