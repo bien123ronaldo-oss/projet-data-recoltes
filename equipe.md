@@ -16,4 +16,6 @@ Une ou deux phrases par membre, écrites par le membre lui-même.
 
 REJUSTE Jovens Fequiere a réalisé la partie 2 du notebook (jointures et indicateurs), ainsi que le tableau de bord Streamlit : filtres, graphiques et conclusions pour les cinq questions du projet.
 
+Bien aime Ronaldo a réalisé les parties 4 et 5 du notebook (questions 1 et 2) : classement des cultures en tonnes et en valeur, puis rendements par culture et par département, avec le meilleur département pour chaque culture. Il a aussi complété l'onglet « Rendements » du tableau de bord (rendement par département et par culture).
+
 La répartition des autres parties ci-dessus est prévue pour l'équipe ; chaque membre relit le projet complet avant la soutenance.
