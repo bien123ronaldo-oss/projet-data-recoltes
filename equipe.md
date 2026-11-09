@@ -1,12 +1,12 @@
 # Équipe
 
-**Lien du tableau de bord :** (https://projet-data-recoltes-cruiser.streamlit.app)
+**Lien du tableau de bord :** https://projet-data-recoltes-cruiser.streamlit.app
 
 | Membre | Identifiant GitHub | Rôle principal |
 |---|---|---|
 | REJUSTE Jovens Fequiere | À compléter | Jointures et indicateurs ; tableau de bord Streamlit |
 | Herlentz12 | À compléter | Diagnostic et nettoyage des données |
-| Bien123Ronaldo-oss | À compléter | Analyses des questions 1 et 2 : production, valeur et rendements |
+| bien123Ronaldo-oss | À compléter | Analyses des questions 1 et 2 : production, valeur et rendements |
 | Deliscar Dave | À compléter | Analyses des questions 3 et 4 : pluie et évolution des récoltes |
 | Jethro Kerson Jerome | À compléter | Analyse de la question 5 : production par habitant ; intégration et vérification finales |
 
